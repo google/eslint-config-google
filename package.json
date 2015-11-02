@@ -1,0 +1,50 @@
+{
+  "name": "eslint-config-google",
+  "version": "0.2.0",
+  "description": "ESLint shareable config for the Google style",
+  "license": "Apache-2",
+  "repository": "google/eslint-config-google",
+  "author": "Google",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "google",
+    "code",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "jscs",
+    "jshint",
+    "jslint",
+    "eslint",
+    "validate",
+    "code style",
+    "strict",
+    "check",
+    "checker",
+    "verify",
+    "enforce",
+    "hint"
+  ],
+  "dependencies": {
+    "deep-assign": "^2.0.0",
+    "eslint-config-xo": "^0.7.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "eslint": "^1.8.0",
+    "is-plain-obj": "^1.0.0",
+    "temp-write": "^2.0.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=1.8.0"
+  }
+}
