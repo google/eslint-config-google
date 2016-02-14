@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 'use strict';
-var deepAssign = require('deep-assign');
-var xo = require('eslint-config-xo');
 
-module.exports = deepAssign(xo, {
+module.exports = {
+  extends: 'xo',
   globals: {
     goog: true
   },
@@ -38,4 +37,4 @@ module.exports = deepAssign(xo, {
       ignoreUrls: true
     }]
   }
-});
+};

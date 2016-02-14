@@ -35,7 +35,6 @@
     "hint"
   ],
   "dependencies": {
-    "deep-assign": "^2.0.0",
     "eslint-config-xo": "^0.10.1"
   },
   "devDependencies": {

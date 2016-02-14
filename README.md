@@ -20,8 +20,8 @@ Add some ESLint config to your `package.json`:
 		"lint": "eslint ."
 	},
 	"devDependencies": {
-		"eslint": "^1.8.0",
-		"eslint-config-google": "^0.2.0"
+		"eslint": "^2.0.0",
+		"eslint-config-google": "^0.4.0"
 	},
 	"eslintConfig": {
 		"extends": "google"
