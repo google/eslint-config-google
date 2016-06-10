@@ -24,7 +24,7 @@ module.exports = {
     'indent': [2, 2, {
       SwitchCase: 1
     }],
-    'brace-style': [2, '1tbs', {allowSingleLine: true}],
+    'curly': 0,
     'space-before-function-paren': [2, 'never'],
     'valid-jsdoc': [2, {
       requireReturn: false,
