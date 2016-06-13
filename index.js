@@ -25,6 +25,9 @@ module.exports = {
       SwitchCase: 1
     }],
     'curly': 0,
+    'no-unused-vars': [2, {
+      "args": "none",
+    }],
     'space-before-function-paren': [2, 'never'],
     'valid-jsdoc': [2, {
       requireReturn: false,
