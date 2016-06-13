@@ -24,10 +24,6 @@ module.exports = {
     'indent': [2, 2, {
       SwitchCase: 1
     }],
-    'curly': 0,
-    'no-unused-vars': [2, {
-      "args": "none",
-    }],
     'space-before-function-paren': [2, 'never'],
     'valid-jsdoc': [2, {
       requireReturn: false,
@@ -39,6 +35,14 @@ module.exports = {
     'max-len': [1, 80, 4, {
       ignoreComments: true,
       ignoreUrls: true
-    }]
+    }],
+
+    //  Resetting things that eslint-config-xo has an opinion about, but the
+    //  Google Style Guide doesn't.
+    'curly': 0,
+    'no-floating-decimal': 0,
+    'no-unused-vars': [2, {
+      "args": "none",
+    }],
   }
 };
