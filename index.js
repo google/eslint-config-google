@@ -16,10 +16,15 @@
 'use strict';
 
 module.exports = {
+  parser: 'babel-eslint',
   extends: 'xo',
   globals: {
     goog: true
   },
+
+  plugins: [
+    'react'
+  ],
 
   rules: {
     'indent': [
@@ -29,7 +34,10 @@ module.exports = {
         SwitchCase: 1
       }
     ],
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': [
+      'error',
+      'never'
+    ],
     'valid-jsdoc': [
       'error',
       {
@@ -59,6 +67,34 @@ module.exports = {
       {
         args: 'none'
       }
+    ],
+
+    //  JSX support
+    'react/jsx-uses-react': 'warn',
+    'react/jsx-uses-vars': 'warn',
+    'jsx-quotes': [
+      'warn',
+      'prefer-single'
+    ],
+    'react/jsx-no-bind': 'warn',
+    'react/jsx-first-prop-new-line': 'warn',
+    'react/jsx-max-props-per-line': 'warn',
+    'react/react-in-jsx-scope': 'error',
+    'react/wrap-multilines': 'error',
+    'react/require-render-return': 'error',
+    'react/jsx-no-duplicate-props': 'error',
+    'react/jsx-pascal-case': 'error',
+    'react/jsx-space-before-closing': [
+      'error',
+      'always'
+    ],
+    'react/jsx-equals-spacing': [
+      'error',
+      'always'
+    ],
+    'react/jsx-curly-spacing': [
+      'error',
+      'always'
     ]
   }
 };
