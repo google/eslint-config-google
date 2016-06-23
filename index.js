@@ -62,6 +62,13 @@ module.exports = {
     //  Google Style Guide doesn't.
     'curly': 'off',
     'no-floating-decimal': 'off',
+    'padded-blocks': 'off',
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 2
+      }
+    ],
     'no-unused-vars': [
       'error',
       {
