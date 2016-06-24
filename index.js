@@ -68,6 +68,13 @@ module.exports = {
 
     //  Resetting things that eslint-config-xo has an opinion about, but the
     //  Google Style Guide doesn't.
+    'one-var': [
+      'error',
+      {
+        uninitialized: 'always',
+        initialized: 'never'
+      }
+    ],
     'curly': 'off',
     'no-floating-decimal': 'off',
     'padded-blocks': 'off',
