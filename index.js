@@ -75,6 +75,7 @@ module.exports = {
         initialized: 'never'
       }
     ],
+    'no-else-return': 'off',
     'curly': 'off',
     'no-floating-decimal': 'off',
     'padded-blocks': 'off',
