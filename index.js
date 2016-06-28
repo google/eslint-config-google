@@ -16,33 +16,108 @@
 'use strict';
 
 module.exports = {
+  parser: 'babel-eslint',
   extends: 'xo',
   globals: {
     goog: true
   },
+
+  plugins: [
+    'react'
+  ],
+
   rules: {
-    'indent': [2, 2, {
-      SwitchCase: 1
-    }],
-    'space-before-function-paren': [2, 'never'],
-    'valid-jsdoc': [2, {
-      requireReturn: false,
-      prefer: {
-        returns: 'return'
+    'quotes': [
+      'error',
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true
       }
-    }],
-    'require-jsdoc': 1,
-    'max-len': [1, 80, 4, {
-      ignoreComments: true,
-      ignoreUrls: true
-    }],
+    ],
+    'indent': [
+      'error',
+      2,
+      {
+        SwitchCase: 1
+      }
+    ],
+    'space-before-function-paren': [
+      'error',
+      'never'
+    ],
+    'valid-jsdoc': [
+      'error',
+      {
+        requireReturn: false,
+        prefer: {
+          returns: 'return'
+        }
+      }
+    ],
+    'require-jsdoc': 'warn',
+    'max-len': [
+      'warn',
+      80,
+      4,
+      {
+        ignoreComments: true,
+        ignoreUrls: true
+      }
+    ],
 
     //  Resetting things that eslint-config-xo has an opinion about, but the
     //  Google Style Guide doesn't.
-    'curly': 0,
-    'no-floating-decimal': 0,
-    'no-unused-vars': [2, {
-      "args": "none",
-    }],
+    'one-var': [
+      'error',
+      {
+        uninitialized: 'always',
+        initialized: 'never'
+      }
+    ],
+    'no-else-return': 'off',
+    'curly': 'off',
+    'no-floating-decimal': 'off',
+    'padded-blocks': 'off',
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 2
+      }
+    ],
+    'no-unused-vars': [
+      'error',
+      {
+        args: 'none'
+      }
+    ],
+
+    //  JSX support
+    'react/jsx-uses-react': 'warn',
+    'react/jsx-uses-vars': 'warn',
+    'jsx-quotes': [
+      'warn',
+      'prefer-single'
+    ],
+    'react/jsx-no-bind': 'warn',
+    'react/jsx-first-prop-new-line': 'warn',
+    'react/jsx-max-props-per-line': 'warn',
+    'react/react-in-jsx-scope': 'error',
+    'react/wrap-multilines': 'error',
+    'react/require-render-return': 'error',
+    'react/jsx-no-duplicate-props': 'error',
+    'react/jsx-pascal-case': 'error',
+    'react/jsx-space-before-closing': [
+      'error',
+      'always'
+    ],
+    'react/jsx-equals-spacing': [
+      'error',
+      'always'
+    ],
+    'react/jsx-curly-spacing': [
+      'error',
+      'always'
+    ]
   }
 };

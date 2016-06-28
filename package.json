@@ -35,7 +35,9 @@
     "hint"
   ],
   "dependencies": {
-    "eslint-config-xo": "^0.13.0"
+    "babel-eslint": "6.0.4",
+    "eslint-plugin-react": "5.2.2",
+    "eslint-config-xo": "0.13.0"
   },
   "devDependencies": {
     "ava": "*",
