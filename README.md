@@ -2,7 +2,7 @@
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the [Google style](http://google.github.io/styleguide/javascriptguide.xml)
 
-Note that there are some [rules](https://github.com/google/eslint-config-google/blob/master/index.js#L42-L46) the Google style guide isn't opinionated about and you might want to set yourself.
+Note that there are some [rules](https://github.com/google/eslint-config-google/blob/master/index.js) the Google style guide isn't opinionated about and you might want to set yourself.
 
 
 ## Install
@@ -22,7 +22,7 @@ Add some ESLint config to your `package.json`:
 		"lint": "eslint ."
 	},
 	"devDependencies": {
-		"eslint": "^2.7.0",
+		"eslint": "^3.5.0",
 		"eslint-config-google": "^0.5.0"
 	},
 	"eslintConfig": {

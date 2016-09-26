@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 Google Inc. All rights reserved.
+ * Copyright 2016 Google Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,26 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import test from 'ava';
-import isPlainObj from 'is-plain-obj';
-import tempWrite from 'temp-write';
-import eslint from 'eslint';
-import conf from '../';
 
-function runEslint(str, conf) {
-  const linter = new eslint.CLIEngine({
-    useEslintrc: false,
-    configFile: tempWrite.sync(JSON.stringify(conf))
-  });
+ 'use strict';
 
-  return linter.executeOnText(str).results[0].messages;
-}
+const assert = require('assert');
+const eslint = require('eslint');
+const conf = require('../');
 
-test(t => {
-  t.true(isPlainObj(conf));
-  t.true(isPlainObj(conf.rules));
+// The source files to lint.
+const repoFiles = [
+  'index.js',
+  'test/test.js',
+];
 
-  const errors = runEslint(`'use strict'\nvar foo = function () {};\nfoo();\n`, conf);
-  t.is(errors[0].ruleId, 'semi');
-  t.is(errors[1].ruleId, 'space-before-function-paren');
+// Use the rules defined in this repo to test against.
+const eslintOpts = {
+  envs: ['node', 'es6'],
+  useEslintrc: false,
+  rules: conf.rules,
+};
+
+// Runs the linter on the repo files and asserts no errors were found.
+const report = new eslint.CLIEngine(eslintOpts).executeOnFiles(repoFiles);
+assert.equal(report.errorCount, 0);
+assert.equal(report.warningCount, 0);
+repoFiles.forEach((file, index) => {
+  assert(report.results[index].filePath.endsWith(file));
 });
