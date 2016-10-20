@@ -215,7 +215,7 @@ module.exports = {
     // 'max-params': 0,
     // 'max-statements-per-line': 0,
     // 'max-statements': 0,
-    // 'multiline-ternary': 0, // TODO(philipwalton): add a rule to enfore the
+    // 'multiline-ternary': 0, // TODO(philipwalton): add a rule to enforce the
                                // operator appearing at the end of the line.
     'new-cap': 2,
     // 'new-parens': 0,
