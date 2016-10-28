@@ -61,6 +61,7 @@ module.exports = {
     // 'use-isnan': 2 // eslint:recommended
     'valid-jsdoc': [2, {
       requireParamDescription: false,
+      requireReturnDescription: false,
       requireReturn: false,
       prefer: {returns: 'return'},
     }],
@@ -180,7 +181,7 @@ module.exports = {
     'array-bracket-spacing': [2, 'never'],
     // 'block-spacing': 0,
     'brace-style': 2,
-    'camelcase': 2,
+    'camelcase': [2, {properties: 'never'}],
     'comma-dangle': [2, 'always-multiline'],
     'comma-spacing': 2,
     'comma-style': 2,
