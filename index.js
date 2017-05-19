@@ -197,7 +197,7 @@ module.exports = {
     // 'id-match': 0,
     'indent': [2, 2, {
       SwitchCase: 1,
-      VariableDeclarator: 2
+      VariableDeclarator: 2,
     }],
     // 'jsx-quotes': 0,
     'key-spacing': 2,
