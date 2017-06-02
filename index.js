@@ -200,7 +200,7 @@ module.exports = {
                     // Google's 4-space indent for line continuations.
     // 'jsx-quotes': 0,
     'key-spacing': 2,
-    'keyword-spacing': 0,
+    'keyword-spacing': 2,
     // 'line-comment-position': 0,
     'linebreak-style': 2,
     // 'lines-around-comment': 0,
