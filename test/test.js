@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
- 'use strict';
+'use strict';
 
 const assert = require('assert');
 const eslint = require('eslint');
