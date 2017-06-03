@@ -196,8 +196,10 @@ module.exports = {
     // 'id-blacklist': 0,
     // 'id-length': 0,
     // 'id-match': 0,
-    // 'indent': 0, // TODO(philipwalton): this rule isn't compatible with
-                    // Google's 4-space indent for line continuations.
+    'indent': [2, 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 2,
+    }],
     // 'jsx-quotes': 0,
     'key-spacing': 2,
     'keyword-spacing': 2,
