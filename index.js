@@ -281,10 +281,9 @@ module.exports = {
     // http://eslint.org/docs/rules/#ecmascript-6
     // ------------------------------------------
     // 'arrow-body-style': 0,
-    'arrow-parens': [2, 'always'], // TODO(philipwalton): technically arrow
-                                   // parens are optional but recommended.
-                                   // ESLint doesn't support a *consistent*
-                                   // setting so "always" is used.
+    'arrow-parens': [2, 'as-needed', {
+      requireForBlockBody: true,
+    }],
     // 'arrow-spacing': 0,
     'constructor-super': 2, // eslint:recommended
     'generator-star-spacing': [2, 'after'],
