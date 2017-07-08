@@ -311,7 +311,7 @@ module.exports = {
     // 'no-duplicate-imports': 0,
     'no-new-symbol': 2, // eslint:recommended
     // 'no-restricted-imports': 0,
-    'no-this-before-super': 2,  // eslint:recommended
+    'no-this-before-super': 2, // eslint:recommended
     // 'no-useless-computed-key': 0,
     // 'no-useless-constructor': 0,
     // 'no-useless-rename': 0,

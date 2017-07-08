@@ -28,8 +28,9 @@ const repoFiles = [
 
 // Use the rules defined in this repo to test against.
 const eslintOpts = {
-  envs: ['node', 'es6'],
   useEslintrc: false,
+  envs: ['node', 'es6'],
+  parserOptions: {ecmaVersion: 2017},
   rules: conf.rules,
 };
 
