@@ -31,6 +31,9 @@ module.exports = {
     // Possible Errors
     // http://eslint.org/docs/rules/#possible-errors
     // ---------------------------------------------
+    // 'for-direction': 0,
+    // 'no-await-in-loop': 0,
+    // 'no-compare-neg-zero': 2, // eslint:recommended
     'no-cond-assign': 0, // eslint:recommended
     // 'no-console': 2, // eslint:recommended
     // 'no-constant-condition': 2, // eslint:recommended
@@ -39,8 +42,8 @@ module.exports = {
     // 'no-dupe-args': 2, // eslint:recommended
     // 'no-dupe-keys': 2, // eslint:recommended
     // 'no-duplicate-case': 2, // eslint:recommended
-    // 'no-empty-character-class': 2, // eslint:recommended
     // 'no-empty': 2, // eslint:recommended
+    // 'no-empty-character-class': 2, // eslint:recommended
     // 'no-ex-assign': 2, // eslint:recommended
     // 'no-extra-boolean-cast': 2, // eslint:recommended
     // 'no-extra-parens': 0,
@@ -112,14 +115,15 @@ module.exports = {
     // 'no-magic-numbers': 0,
     'no-multi-spaces': 2,
     'no-multi-str': 2,
+    // 'no-new': 0,
     // 'no-new-func': 0,
     'no-new-wrappers': 2,
-    // 'no-new': 0,
-    // 'no-octal-escape': 0,
     // 'no-octal': 2, // eslint:recommended
+    // 'no-octal-escape': 0,
     // 'no-param-reassign': 0,
     // 'no-proto': 0,
     // 'no-redeclare': 2, // eslint:recommended
+    // 'no-restricted-properties': 0,
     // 'no-return-assign': 0,
     // 'no-script-url': 0,
     // 'no-self-assign': 2, // eslint:recommended
@@ -135,7 +139,9 @@ module.exports = {
     // 'no-void': 0,
     // 'no-warning-comments': 0,
     'no-with': 2,
+    // 'prefer-promise-reject-errors': 0,
     // 'radix': 0,
+    // 'require-await': 0,
     // 'vars-on-top': 0,
     // 'wrap-iife': 0,
     // 'yoda': 0,
@@ -153,10 +159,10 @@ module.exports = {
     // 'no-delete-var': 2, // eslint:recommended
     // 'no-label-var': 0,
     // 'no-restricted-globals': 0,
-    // 'no-shadow-restricted-names': 0,
     // 'no-shadow': 0,
-    // 'no-undef-init': 0,
+    // 'no-shadow-restricted-names': 0,
     // 'no-undef': 2, // eslint:recommended
+    // 'no-undef-init': 0,
     // 'no-undefined': 0,
     'no-unused-vars': [2, {args: 'none'}], // eslint:recommended
     // 'no-use-before-define': 0,
@@ -167,22 +173,25 @@ module.exports = {
     // 'callback-return': 0,
     // 'global-require': 0,
     // 'handle-callback-err': 0,
+    // 'no-buffer-constructor': 0,
     // 'no-mixed-requires': 0,
     // 'no-new-require': 0,
     // 'no-path-concat': 0,
     // 'no-process-env': 0,
     // 'no-process-exit': 0,
     // 'no-restricted-modules': 0,
-    // 'no-restricted-properties': 0,
     // 'no-sync': 0,
 
     // Stylistic Issues
     // http://eslint.org/docs/rules/#stylistic-issues
     // ----------------------------------------------
+    'array-bracket-newline': 0, // eslint:recommended
     'array-bracket-spacing': [2, 'never'],
-    // 'block-spacing': 0,
+    'array-element-newline': 0, // eslint:recommended
+    'block-spacing': [2, 'never'],
     'brace-style': 2,
     'camelcase': [2, {properties: 'never'}],
+    // 'capitalized-comments': 0,
     'comma-dangle': [2, 'always-multiline'],
     'comma-spacing': 2,
     'comma-style': 2,
@@ -204,7 +213,6 @@ module.exports = {
     // 'line-comment-position': 0,
     'linebreak-style': 2,
     // 'lines-around-comment': 0,
-    // 'lines-around-directive': 0,
     // 'max-depth': 0,
     'max-len': [2, {
       code: 80,
@@ -215,14 +223,12 @@ module.exports = {
     // 'max-lines': 0,
     // 'max-nested-callbacks': 0,
     // 'max-params': 0,
-    // 'max-statements-per-line': 0,
     // 'max-statements': 0,
+    // 'max-statements-per-line': 0,
     // 'multiline-ternary': 0, // TODO(philipwalton): add a rule to enforce the
                                // operator appearing at the end of the line.
     'new-cap': 2,
     // 'new-parens': 0,
-    // 'newline-after-var': 0,
-    // 'newline-before-return': 0,
     // 'newline-per-chained-call': 0,
     'no-array-constructor': 2,
     // 'no-bitwise': 0,
@@ -231,6 +237,7 @@ module.exports = {
     // 'no-lonely-if': 0,
     // 'no-mixed-operators': 0,
     'no-mixed-spaces-and-tabs': 2, // eslint:recommended
+    // 'no-multi-assign': 0,
     'no-multiple-empty-lines': [2, {max: 2}],
     // 'no-negated-condition': 0,
     // 'no-nested-ternary': 0,
@@ -243,18 +250,20 @@ module.exports = {
     // 'no-underscore-dangle': 0,
     // 'no-unneeded-ternary': 0,
     // 'no-whitespace-before-property': 0,
+    // 'nonblock-statement-body-position': 0,
     // 'object-curly-newline': 0,
     'object-curly-spacing': 2,
     // 'object-property-newline': 0,
-    // 'one-var-declaration-per-line': 0,
     'one-var': [2, {
       var: 'never',
       let: 'never',
       const: 'never',
     }],
+    // 'one-var-declaration-per-line': 0,
     // 'operator-assignment': 0,
     // 'operator-linebreak': 0,
     'padded-blocks': [2, 'never'],
+    // 'padding-line-between-statements': 0,
     'quote-props': [2, 'consistent'],
     'quotes': [2, 'single', {allowTemplateLiterals: true}],
     'require-jsdoc': [2, {
@@ -264,16 +273,23 @@ module.exports = {
         ClassDeclaration: true,
       },
     }],
-    'semi-spacing': 2,
     'semi': 2,
+    'semi-spacing': 2,
+    // 'semi-style': 0,
     // 'sort-keys': 0,
     // 'sort-vars': 0,
     'space-before-blocks': 2,
-    'space-before-function-paren': [2, 'never'],
+    'space-before-function-paren': [2, {
+      asyncArrow: 'always',
+      anonymous: 'never',
+      named: 'never',
+    }],
     // 'space-in-parens': 0,
     // 'space-infix-ops': 0,
     // 'space-unary-ops': 0,
     'spaced-comment': [2, 'always'],
+    'switch-colon-spacing': 2,
+    // 'template-tag-spacing': 0,
     // 'unicode-bom': 0,
     // 'wrap-regex': 0,
 
@@ -303,8 +319,8 @@ module.exports = {
     // 'object-shorthand': 0,
     // 'prefer-arrow-callback': 0,
     // 'prefer-const': 0,
+    // 'prefer-destructuring': 0,
     // 'prefer-numeric-literals': 0,
-    // 'prefer-reflect': 0,
     'prefer-rest-params': 2,
     'prefer-spread': 2,
     // 'prefer-template': 0,

@@ -35,9 +35,9 @@
     "hint"
   ],
   "devDependencies": {
-    "eslint": "^3.8.1"
+    "eslint": "^4.1.1"
   },
   "peerDependencies": {
-    "eslint": ">=3.8.1"
+    "eslint": ">=4.1.1"
   }
 }
