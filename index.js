@@ -205,8 +205,7 @@ module.exports = {
     // 'id-blacklist': 0,
     // 'id-length': 0,
     // 'id-match': 0,
-    // 'indent': 0, // TODO(philipwalton): this rule isn't compatible with
-                    // Google's 4-space indent for line continuations.
+    'indent': ['error', 2, {'CallExpression': {'arguments': 2}}],
     // 'jsx-quotes': 0,
     'key-spacing': 2,
     'keyword-spacing': 2,
