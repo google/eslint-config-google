@@ -35,7 +35,7 @@
     "hint"
   ],
   "devDependencies": {
-    "eslint": "^4.1.1"
+    "eslint": "^5.4.0"
   },
   "peerDependencies": {
     "eslint": ">=4.1.1"

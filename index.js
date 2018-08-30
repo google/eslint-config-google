@@ -81,9 +81,9 @@ module.exports = {
     // 'class-methods-use-this': 0,
     // 'complexity': 0,
     // 'consistent-return': 0
-    'curly': [2, 'multi-line'], // TODO(philipwalton): add an option to enforce
-                                // braces with the exception of simple,
-                                // single-line if statements.
+    // TODO(philipwalton): add an option to enforce braces with the
+    // exception of simple, single-line if statements.
+    'curly': [2, 'multi-line'],
     // 'default-case': 0,
     // 'dot-location': 0,
     // 'dot-notation': 0,
@@ -205,8 +205,27 @@ module.exports = {
     // 'id-blacklist': 0,
     // 'id-length': 0,
     // 'id-match': 0,
-    // 'indent': 0, // TODO(philipwalton): this rule isn't compatible with
-                    // Google's 4-space indent for line continuations.
+    'indent': [
+      'error', 2, {
+        'CallExpression': {
+          'arguments': 2,
+        },
+        'FunctionDeclaration': {
+          'body': 1,
+          'parameters': 2,
+        },
+        'FunctionExpression': {
+          'body': 1,
+          'parameters': 2,
+        },
+        'MemberExpression': 2,
+        'ObjectExpression': 1,
+        'SwitchCase': 1,
+        'ignoredNodes': [
+          'ConditionalExpression',
+        ],
+      },
+    ],
     // 'jsx-quotes': 0,
     'key-spacing': 2,
     'keyword-spacing': 2,
@@ -225,8 +244,9 @@ module.exports = {
     // 'max-params': 0,
     // 'max-statements': 0,
     // 'max-statements-per-line': 0,
-    // 'multiline-ternary': 0, // TODO(philipwalton): add a rule to enforce the
-                               // operator appearing at the end of the line.
+    // TODO(philipwalton): add a rule to enforce the operator appearing
+    // at the end of the line.
+    // 'multiline-ternary': 0,
     'new-cap': 2,
     // 'new-parens': 0,
     // 'newline-per-chained-call': 0,
@@ -297,10 +317,10 @@ module.exports = {
     // http://eslint.org/docs/rules/#ecmascript-6
     // ------------------------------------------
     // 'arrow-body-style': 0,
-    'arrow-parens': [2, 'always'], // TODO(philipwalton): technically arrow
-                                   // parens are optional but recommended.
-                                   // ESLint doesn't support a *consistent*
-                                   // setting so "always" is used.
+    // TODO(philipwalton): technically arrow parens are optional but
+    // recommended. ESLint doesn't support a *consistent* setting so
+    // "always" is used.
+    'arrow-parens': [2, 'always'],
     // 'arrow-spacing': 0,
     'constructor-super': 2, // eslint:recommended
     'generator-star-spacing': [2, 'after'],
