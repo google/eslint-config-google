@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-google",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "ESLint shareable config for the Google style",
   "license": "Apache-2.0",
   "repository": "google/eslint-config-google",
@@ -38,6 +38,6 @@
     "eslint": "^5.4.0"
   },
   "peerDependencies": {
-    "eslint": ">=4.1.1"
+    "eslint": ">=5.4.0"
   }
 }
