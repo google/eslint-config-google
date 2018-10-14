@@ -338,7 +338,7 @@ module.exports = {
     'no-var': 2,
     // 'object-shorthand': 0,
     // 'prefer-arrow-callback': 0,
-    // 'prefer-const': 0,
+    'prefer-const': ['error', {destructuring: 'all'}],
     // 'prefer-destructuring': 0,
     // 'prefer-numeric-literals': 0,
     'prefer-rest-params': 2,
