@@ -139,7 +139,7 @@ module.exports = {
     // 'no-void': 0,
     // 'no-warning-comments': 0,
     'no-with': 2,
-    // 'prefer-promise-reject-errors': 0,
+    'prefer-promise-reject-errors': 2,
     // 'radix': 0,
     // 'require-await': 0,
     // 'vars-on-top': 0,
