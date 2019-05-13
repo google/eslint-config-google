@@ -237,7 +237,7 @@ module.exports = {
       code: 80,
       tabWidth: 2,
       ignoreUrls: true,
-      ignorePattern: '^goog\.(module|require)',
+      ignorePattern: 'goog\.(module|require)',
     }],
     // 'max-lines': 0,
     // 'max-nested-callbacks': 0,
