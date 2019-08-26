@@ -4,11 +4,16 @@
 
 
 ## Installation
+### npm 
 
 ```
 $ npm install --save-dev eslint eslint-config-google
 ```
+### yarn
 
+```
+$ yarn add eslint eslint-config-google
+```
 
 ## Usage
 
