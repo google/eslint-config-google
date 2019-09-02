@@ -206,7 +206,7 @@ module.exports = {
     // 'id-length': 0,
     // 'id-match': 0,
     'indent': [
-      'error', 2, {
+      2, 2, {
         'CallExpression': {
           'arguments': 2,
         },
@@ -281,7 +281,7 @@ module.exports = {
     }],
     // 'one-var-declaration-per-line': 0,
     // 'operator-assignment': 0,
-    // 'operator-linebreak': 0,
+    'operator-linebreak': [2, 'after'],
     'padded-blocks': [2, 'never'],
     // 'padding-line-between-statements': 0,
     'quote-props': [2, 'consistent'],
@@ -338,7 +338,7 @@ module.exports = {
     'no-var': 2,
     // 'object-shorthand': 0,
     // 'prefer-arrow-callback': 0,
-    'prefer-const': ['error', {destructuring: 'all'}],
+    'prefer-const': [2, {destructuring: 'all'}],
     // 'prefer-destructuring': 0,
     // 'prefer-numeric-literals': 0,
     'prefer-rest-params': 2,
