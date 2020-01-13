@@ -26,7 +26,7 @@ module.exports = {
     //   mentioned by the google styleguide are listed but commented out (so
     //   they don't override a base ruleset).
     // - Rules that are recommended but contradict the Google styleguide
-    //   are explicitely set to the Google styleguide value.
+    //   are explicitly set to the Google styleguide value.
 
     // Possible Errors
     // http://eslint.org/docs/rules/#possible-errors
