@@ -280,13 +280,6 @@ module.exports = {
     // 'padding-line-between-statements': 'off',
     'quote-props': ['error', 'consistent'],
     'quotes': ['error', 'single', {allowTemplateLiterals: true}],
-    'require-jsdoc': ['error', {
-      require: {
-        FunctionDeclaration: true,
-        MethodDefinition: true,
-        ClassDeclaration: true,
-      },
-    }],
     'semi': 'error',
     'semi-spacing': 'error',
     // 'semi-style': 'off',
