@@ -62,12 +62,6 @@ module.exports = {
     // 'no-unsafe-finally': 'error', // eslint:recommended
     // 'no-unsafe-negation': 'off',
     // 'use-isnan': 'error' // eslint:recommended
-    'valid-jsdoc': ['error', {
-      requireParamDescription: false,
-      requireReturnDescription: false,
-      requireReturn: false,
-      prefer: {returns: 'return'},
-    }],
     // 'valid-typeof': 'error' // eslint:recommended
 
 
