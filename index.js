@@ -62,12 +62,6 @@ module.exports = {
     // 'no-unsafe-finally': 'error', // eslint:recommended
     // 'no-unsafe-negation': 'off',
     // 'use-isnan': 'error' // eslint:recommended
-    'valid-jsdoc': ['error', {
-      requireParamDescription: false,
-      requireReturnDescription: false,
-      requireReturn: false,
-      prefer: {returns: 'return'},
-    }],
     // 'valid-typeof': 'error' // eslint:recommended
 
 
@@ -286,13 +280,6 @@ module.exports = {
     // 'padding-line-between-statements': 'off',
     'quote-props': ['error', 'consistent'],
     'quotes': ['error', 'single', {allowTemplateLiterals: true}],
-    'require-jsdoc': ['error', {
-      require: {
-        FunctionDeclaration: true,
-        MethodDefinition: true,
-        ClassDeclaration: true,
-      },
-    }],
     'semi': 'error',
     'semi-spacing': 'error',
     // 'semi-style': 'off',
