@@ -43,4 +43,4 @@ To see how the `google` config compares with `eslint:recommended`, refer to the 
 
 ## License
 
-Apache-2 © Google, LLC
+See [License](https://github.com/google/eslint-config-google/blob/main/LICENSE)
