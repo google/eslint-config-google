@@ -1,12 +1,12 @@
 {
   "name": "eslint-config-google",
-  "version": "0.14.0",
+  "version": "1.0.0",
   "description": "ESLint shareable config for the Google style",
   "license": "Apache-2.0",
   "repository": "google/eslint-config-google",
   "author": "Google",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.20.0"
   },
   "scripts": {
     "test": "node test/test.js"
@@ -35,9 +35,9 @@
     "hint"
   ],
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^9.0.0"
   },
   "peerDependencies": {
-    "eslint": ">=5.16.0"
+    "eslint": ">=9.0.0"
   }
 }

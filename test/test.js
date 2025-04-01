@@ -14,30 +14,58 @@
  * limitations under the License.
  */
 
-'use strict';
+"use strict";
 
-const assert = require('assert');
-const eslint = require('eslint');
-const conf = require('../');
-
-// The source files to lint.
-const repoFiles = [
-  'index.js',
-  'test/test.js',
-];
-
-// Use the rules defined in this repo to test against.
-const eslintOpts = {
-  useEslintrc: false,
-  envs: ['node', 'es6'],
-  parserOptions: {ecmaVersion: 2018},
-  rules: conf.rules,
-};
+const path = require("path");
+const assert = require("assert");
+const { ESLint } = require("eslint");
 
 // Runs the linter on the repo files and asserts no errors were found.
-const report = new eslint.CLIEngine(eslintOpts).executeOnFiles(repoFiles);
-assert.equal(report.errorCount, 0);
-assert.equal(report.warningCount, 0);
-repoFiles.forEach((file, index) => {
-  assert(report.results[index].filePath.endsWith(file));
-});
+(async function main() {
+  const eslint = new ESLint({
+    overrideConfigFile: "test/test-config.mjs",
+  });
+
+  const testValid = await eslint.lintFiles(["test/test-valid.js"]);
+  const testInvalid = await eslint.lintFiles(["test/test-invalid.js"]);
+
+  function printResult(result) {
+    const relativePath = path.relative(process.cwd(), result.filePath);
+    console.log(`\n🔍 Checking: ${relativePath}`);
+    if (result.messages.length > 0) {
+      console.log("⚠️  Issues found:");
+      result.messages.forEach((msg) => {
+        console.log(
+          `  ${relativePath}:${msg.line}:${msg.column} ${msg.message} (${msg.ruleId})`
+        );
+      });
+    } else {
+      console.log("✅ No issues found.");
+    }
+  }
+
+  const validResult = testValid[0];
+  const invalidResult = testInvalid[0];
+
+  printResult(validResult);
+  printResult(invalidResult);
+
+  let success = true;
+
+  if (validResult.errorCount > 0 || validResult.warningCount > 0) {
+    console.error("\n❌ test-valid.js should have no errors or warnings.");
+    success = false;
+  }
+
+  if (invalidResult.errorCount === 0 && invalidResult.warningCount === 0) {
+    console.error("\n❌ test-invalid.js should have errors or warnings.");
+    success = false;
+  }
+
+  if (!success) {
+    console.error("\n❌ Lint tests failed.");
+    process.exit(1);
+  } else {
+    console.log("\n✅ All tests passed as expected.");
+  }
+})();
