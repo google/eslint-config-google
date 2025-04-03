@@ -81,7 +81,7 @@ module.exports = {
     // 'default-case': 'off',
     // 'dot-location': 'off',
     // 'dot-notation': 'off',
-    // 'eqeqeq': 'off',
+    'eqeqeq': ['error', 'smart'],
     'guard-for-in': 'error',
     // 'no-alert': 'off',
     'no-caller': 'error',
